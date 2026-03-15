@@ -1,7 +1,0 @@
-<mapper namespace="com.example.demo.mapper.UserMapper">
-
-    <select id="findAll" resultType="com.example.demo.dto.UserDto">
-        SELECT * FROM dual
-    </select>
-
-</mapper>

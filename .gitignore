@@ -1,0 +1,60 @@
+# ===============================
+# Workspace / Eclipse(STS)
+# ===============================
+.metadata/
+.settings/
+.project
+.classpath
+.springBeans
+.sts4-cache
+.apt_generated
+.factorypath
+bin/
+
+# ===============================
+# Gradle
+# ===============================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ===============================
+# Java / Logs
+# ===============================
+*.log
+
+# ===============================
+# IntelliJ
+# ===============================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# ===============================
+# VSCode
+# ===============================
+.vscode/
+
+# ===============================
+# Node / React
+# ===============================
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# ===============================
+# NetBeans
+# ===============================
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+
+# ===============================
+# OS files
+# ===============================
+.DS_Store
+Thumbs.db
