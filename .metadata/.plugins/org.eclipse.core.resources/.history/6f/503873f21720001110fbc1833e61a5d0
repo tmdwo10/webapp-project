@@ -1,0 +1,24 @@
+package com.example.demo.controller;
+
+import com.example.demo.service.TestService;
+
+@RestController
+public class TestController {
+	
+	private final TestService testService;
+	
+	public TestController(TestService testService) {
+		this.testService = testService;
+	}
+	
+	@GetMapper("api/test-users")
+	public List<TestUserDto> getUsers(){
+		return testService.findAll();
+		
+	}
+	
+	
+	
+	
+	
+}

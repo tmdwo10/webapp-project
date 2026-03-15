@@ -1,0 +1,17 @@
+package com.example.demo.mapper;
+
+import java.util.List;
+
+import com.example.demo.dto.LoginRequestDto;
+import com.example.demo.dto.UserDto;
+
+public interface UserMapper {
+	
+	UserDto login(LoginRequestDto loginRequestDto);
+	
+	UserDto finbyUserId(String userId);
+	
+	List<UserDto> findAll();
+	
+	int inserUser(UserDto userDto);
+}

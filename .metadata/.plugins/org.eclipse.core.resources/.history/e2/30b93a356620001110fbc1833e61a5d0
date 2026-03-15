@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+	<select id="login" parameterType="com.example.demo.dto.LoginRequestDto" resultType="com.example.demo.dto.UserDto">
+		SELECT USER_KEY,
+		       USER_ID,
+		       USER_NAME,
+		       USER_AUTH
+		  FROM USERS
+		 WHERE USER_ID = #{userId}
+		   AND USER_PASS = #{userPass}
+		   AND USER_YN = 'Y'
+	</select>
+	
+	<select id="findByUserId" parameterType="string" resultType="com.example.demo.dto.UserDto">
+        SELECT USER_KEY,
+               USER_ID,
+               USER_NAME,
+               USER_AUTH,
+               USE_YN,
+               CREATED_AT,
+               UPDATED_AT
+          FROM USERS
+         WHERE USER_ID = #{userId}
+    </select>
+
+    <select id="findAll" resultType="com.example.demo.dto.UserDto">
+        SELECT USER_KEY,
+               USER_ID,
+               USER_NAME,
+               USER_AUTH,
+               USE_YN,
+               CREATED_AT,
+               UPDATED_AT
+          FROM USERS
+         ORDER BY USER_KEY
+    </select>
+
+    <insert id="insertUser" parameterType="com.example.demo.dto.UserDto">
+        INSERT INTO USERS (
+            USER_ID,
+            USER_NAME,
+            USER_PASS,
+            USER_AUTH,
+            USE_YN
+        )
+        VALUES (
+            #{userId},
+            #{userName},
+            #{userPass},
+            #{userAuth},
+            #{useYn}
+        )
+    </insert>
+    
+</mapper>

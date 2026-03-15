@@ -1,0 +1,12 @@
+package com.example.demo.dto;
+
+public class LoginResponseDto {
+	
+	private Integer userKey;
+	private String userid;
+	private String userName;
+	private String userAuth;
+	
+	
+	
+}
