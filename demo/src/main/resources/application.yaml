@@ -6,7 +6,7 @@ spring:
     name: demo
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://192.168.25.50:1433;databaseName=SQLserver1433;encrypt=true;trustServerCertificate=true
+    url: jdbc:sqlserver://192.168.0.101:1433;databaseName=SQLserver1433;encrypt=true;trustServerCertificate=true
     username: SQLserver1433
     password: LSJpassword!2026
 
